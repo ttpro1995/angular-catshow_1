@@ -8,9 +8,11 @@ import { HelloComponent } from './hello.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { AnothertopbarComponent } from './anothertopbar/anothertopbar.component';
 import { HomeComponent } from './home/home.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'gallery', component: GalleryComponent },
 ];
 
 @NgModule({
@@ -18,7 +20,7 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(appRoutes)  ],
-  declarations: [ AppComponent, HelloComponent, TopBarComponent, AnothertopbarComponent, HomeComponent ],
+  declarations: [ AppComponent, HelloComponent, TopBarComponent, AnothertopbarComponent, HomeComponent, GalleryComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
