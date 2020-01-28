@@ -16,7 +16,7 @@ import { CatApiService } from './cat-api.service';
 
 
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: GalleryComponent },
   { path: 'gallery', component: GalleryComponent },
 ];
 
