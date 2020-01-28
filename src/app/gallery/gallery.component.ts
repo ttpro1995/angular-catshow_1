@@ -23,9 +23,13 @@ export class GalleryComponent implements OnInit {
   }
 
   requestData() {
-    this.fulljson = this.catapi.getRandomCat();
-    this.fulljsonStr = JSON.stringify(this.fulljson);
-    this.image = this.fulljson[0].url;
+    this.catapi.getRandomCat().subscribe((data) => {
+      this.fulljson = data;
+      this.fulljsonStr = JSON.stringify(data);
+      this.image = data[0].url;
+    }
+    );
+    
   }
 
 }

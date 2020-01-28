@@ -27,10 +27,10 @@ export class CatApiService {
 
   getRandomCat() {
     // this.fulljson = this.http.get("https://api.thecatapi.com/v1/images/search");
-    this.http.get<any>("https://api.thecatapi.com/v1/images/search").subscribe(data => {
-      this.fulljson = data;
-    })
-    console.log(this.fulljson);
+    // this.http.get<any>("https://api.thecatapi.com/v1/images/search").subscribe(data => {
+    //   this.fulljson = data;
+    // })
+    this.fulljson = this.http.get("https://api.thecatapi.com/v1/images/search");
     return this.fulljson;
   }
 }
