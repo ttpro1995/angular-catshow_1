@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
 
-
 @Injectable()
-export class CatApiService {
+export class DogApiService {
+
   image;
   info;
   fulljson;
@@ -15,7 +15,7 @@ export class CatApiService {
     'x-api-key': this.myapikey,
   }
 
-  randomCatUrl="https://api.thecatapi.com/v1/images/search";
+  randomUrl="https://api.thedogapi.com/v1/images/search";
   
 
   requestOptions = {                                 
@@ -25,12 +25,14 @@ export class CatApiService {
     private http: HttpClient
   ) { }
 
-  getRandomCat() {
-    // this.fulljson = this.http.get("https://api.thecatapi.com/v1/images/search");
-    // this.http.get<any>("https://api.thecatapi.com/v1/images/search").subscribe(data => {
-    //   this.fulljson = data;
-    // })
-    this.fulljson = this.http.get("https://api.thecatapi.com/v1/images/search", this.requestOptions);
+  getMockData() {
+    this.fulljson = this.http.get('/assets/mock-dog-api.json');
     return this.fulljson;
   }
+
+  getDogData(){
+    this.fulljson = this.http.get(this.randomUrl, this.requestOptions);
+    return this.fulljson;
+  }
+
 }
