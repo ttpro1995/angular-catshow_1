@@ -18,8 +18,9 @@ import { DogApiService } from './dog-api.service';
 
 
 const appRoutes: Routes = [
-  { path: '', component: GalleryWithDogComponent },
-  { path: 'gallery', component: GalleryComponent },
+  { path: '', component: HomeComponent },
+  { path: 'cat', component: GalleryComponent },
+  { path: 'dog', component: GalleryWithDogComponent },
 ];
 
 

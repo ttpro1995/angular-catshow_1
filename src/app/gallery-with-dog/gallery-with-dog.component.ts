@@ -18,6 +18,7 @@ export class GalleryWithDogComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.requestData();
   }
 
   requestData(){
