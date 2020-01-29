@@ -21,7 +21,7 @@ export class GalleryWithDogComponent implements OnInit {
   }
 
   requestData(){
-    this.dogapi.getMockData().subscribe((data) => {
+    this.dogapi.getDogData().subscribe((data) => {
       this.fulljson = data;
       this.fulljsonStr = JSON.stringify(data, undefined, 2);
       this.image = data[0].url;

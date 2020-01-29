@@ -30,4 +30,9 @@ export class DogApiService {
     return this.fulljson;
   }
 
+  getDogData(){
+    this.fulljson = this.http.get(this.randomUrl, this.requestOptions);
+    return this.fulljson;
+  }
+
 }
