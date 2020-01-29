@@ -13,10 +13,11 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { HomeComponent } from './home/home.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { CatApiService } from './cat-api.service';
+import { GalleryWithDogComponent } from './gallery-with-dog/gallery-with-dog.component';
 
 
 const appRoutes: Routes = [
-  { path: '', component: GalleryComponent },
+  { path: '', component: GalleryWithDogComponent },
   { path: 'gallery', component: GalleryComponent },
 ];
 
@@ -28,7 +29,7 @@ const appRoutes: Routes = [
     FormsModule,
     NgbModule, // bootstrap
     RouterModule.forRoot(appRoutes)  ],
-  declarations: [ AppComponent, HelloComponent, TopBarComponent, HomeComponent, GalleryComponent ],
+  declarations: [ AppComponent, HelloComponent, TopBarComponent, HomeComponent, GalleryComponent, GalleryWithDogComponent ],
   bootstrap:    [ AppComponent ],
   providers: [CatApiService]
 })
