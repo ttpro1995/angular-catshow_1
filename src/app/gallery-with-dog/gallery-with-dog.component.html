@@ -1,7 +1,10 @@
 <div class="container">
-<div class="row ">
+<div class="row">
+  <div class="col-sm-12 text-center">
+  <button (click)="requestData()" type="button" class="btn btn-primary btn-lg"> MEOW !!!</button>
+  </div>
 <div class="col-sm-12">
-  <img src='http://placekitten.com/g/1000/1000' alt="Cinque Terre" class='img-fluid'>
+  <img [src]="image" alt="Cinque Terre" class='img-fluid'>
 </div>
 
 <div class="row ">
@@ -27,17 +30,17 @@
   <tbody>
     <tr>
       <th scope="row">Breed Name:</th>
-      <td>Ma asdasd asda sd rkljk;klkljkl asd asd asd asd asd asd asd asd as dasasdasda  adasd sda sda dd dddddd dd ddddvdd </td>
+      <td>{{breedinfo.name}}</td>
 
     </tr>
     <tr>
       <th scope="row">Breed For:</th>
-      <td>Jacob</td>
+      <td>{{breedinfo.bred_for}}</td>
 
     </tr>
     <tr>
       <th scope="row">Breed Group:</th>
-      <td>Larry</td>
+      <td>{{breedinfo.breed_group}}</td>
     </tr>
 
     <tr>
@@ -47,12 +50,12 @@
 
     <tr>
       <th scope="row">Life Span:</th>
-      <td>Larry</td>
+      <td>{{breedinfo.life_span}}</td>
     </tr>
 
     <tr>
       <th scope="row">Original</th>
-      <td>Larry</td>
+      <td>{{breedinfo.temperament}}</td>
     </tr>
   </tbody>
 </table>
